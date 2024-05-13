@@ -22,7 +22,7 @@ const LeaveRequestsUser = () => {
   
       console.log(config);
   
-      const { data } = await axios.get("http://localhost:8000/api/student/myrequest", config);
+      const { data } = await axios.get("https://leave-notice-backend.vercel.app/api/student/myrequest", config);
       setRequests(data);
     } catch (error) {
       console.log(error);
