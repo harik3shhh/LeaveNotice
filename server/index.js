@@ -9,7 +9,7 @@ const cors = require("cors");
 const port = process.env.PORT;
 
 const corsOptions = {
-    origin: "*",
+    origin: "https://leave-notice-harikesh.vercel.app/",
     methods: "GET, POST, PUT, DELETE, HEAD",
     credentials: true,
 };
