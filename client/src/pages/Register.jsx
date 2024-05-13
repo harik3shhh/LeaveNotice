@@ -30,7 +30,7 @@ const Register = () => {
         e.preventDefault();
 
         try {
-            const { data } = await axios.post('http://localhost:8000/api/auth/register', input);
+            const { data } = await axios.post('https://leave-notice-backend.vercel.app/api/auth/register', input);
             if (data?.success) {
                 setInput({ name: "", email: "", phone: "", answer: "", password: "", });
                 console.log('Registration Successful!');
