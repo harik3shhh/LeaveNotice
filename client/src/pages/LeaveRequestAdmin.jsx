@@ -29,7 +29,7 @@ const LeaveRequestsAdmin = () => {
 
       try {
         const { data } = await axios.get(
-          "http://localhost:8000/api/student/get-leave-request?status=pending", config
+          "https://leave-notice-backend.vercel.app/api/student/get-leave-request?status=pending", config
         );
         setRequests(data);
       } catch (err) {
@@ -43,7 +43,7 @@ const LeaveRequestsAdmin = () => {
   const handleApprove = async (id) => {
     try {
       await axios.put(
-        `http://localhost:8000/api/student/update-leave-request/${id}`,
+        `https://leave-notice-backend.vercel.app/api/student/update-leave-request/${id}`,
         { status: "approved" }
       );
       setRequests(requests.map(request => {
@@ -60,7 +60,7 @@ const LeaveRequestsAdmin = () => {
   const handleReject = async (id) => {
     try {
       await axios.put(
-        `http://localhost:8000/api/student/update-leave-request/${id}`,
+        `https://leave-notice-backend.vercel.app/api/student/update-leave-request/${id}`,
         { status: "rejected" }
       );
       setRequests(requests.map(request => {
