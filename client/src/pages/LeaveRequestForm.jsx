@@ -33,7 +33,7 @@ const LeaveRequestForm = () => {
 
       console.log(config);
 
-      await axios.post('http://localhost:8000/api/student/leave-request',  { startDate, endDate, reason }, config);
+      await axios.post('https://leave-notice-backend.vercel.app/api/student/leave-request',  { startDate, endDate, reason }, config);
       toast.success('Leave request submitted successfully');
       setStartDate("")
       setEndDate("")
